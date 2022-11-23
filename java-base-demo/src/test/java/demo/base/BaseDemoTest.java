@@ -16,10 +16,19 @@ public class BaseDemoTest {
     }
 
     @Test
-    public void should_return_sum_of_value(){
+    public void given_2_positive_int_should_return_sum_of_value(){
         BaseDemo baseDemo = new BaseDemo();
         int firstNumber = 10;
         int secondNumber = 12;
-        assertEquals(firstNumber + secondNumber,baseDemo.sum(firstNumber,secondNumber));
+        assertEquals(22,baseDemo.sum(firstNumber,secondNumber));
     }
+
+    @Test
+    public void given_2_negative_int_should_return_sum_of_negative_value(){
+        BaseDemo baseDemo = new BaseDemo();
+        int firstNumber = -10;
+        int secondNumber = -12;
+        assertEquals(-22,baseDemo.sum(firstNumber,secondNumber));
+    }
+
 }
